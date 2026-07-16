@@ -1,0 +1,10 @@
+{
+  "appId": "edu.neumont.mgt101",
+  "appName": "Finance Tracker",
+  "webDir": "dist",
+  "plugins": {
+    "SplashScreen": {
+      "launchAutoHide": false
+    }
+  }
+}
