@@ -1,7 +1,67 @@
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --color-blue-1: rgb(65, 169, 234);
+  --color-blue-2: rgb(126 188 236);
+  --bg-color: #0f172a;
+  --card-bg: #1e293b;
+  --text-main: #e2e8f0;
+  --text-muted: #94a3b8;
+  --accent-gold: #f59e0b;
+  --accent-red: #ef4444;
+  --accent-blue: #3b82f6;
+  --border-color: #334155;
+}
 
 body {
-  padding: 0;
-  margin: 0;
+  font-family: "Arial", sans-serif;
 }
 
 #login{
@@ -9,7 +69,6 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 100vh; 
   gap: 20px;
 }
 
@@ -19,10 +78,15 @@ body {
   box-sizing: border-box;
   text-align: center;
   text-decoration: none;
-  background: rgb(65, 169, 234);
+  background: var(--color-blue-1);
   color: white;
   border-radius: 4px;
   cursor: pointer;
+}
+
+#login-btn:hover{
+  background: var(--color-blue-2);
+  color: black;
 }
 
 #signup-row {
@@ -30,4 +94,147 @@ body {
   flex-direction: row;
   align-items: center;
   gap: 6px;
+  font-size: 12px;
 }
+
+#title-display {
+  color: var(--color-blue-1);
+  font-weight: bold;
+  font-family: cursive;
+  margin: auto;
+  font-size: 32px;
+}
+
+#login-screen {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  gap: 40px;
+  padding: 30%;
+}
+
+/* Code Generated using Google Gemini */
+
+.container {
+  max-width: 850px;
+  margin: 40px auto;
+  background: var(--card-bg);
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.5);
+  padding: 40px;
+}
+
+.header {
+  border-bottom: 2px solid var(--border-color);
+  padding-bottom: 20px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.badge {
+  background-color: rgba(245, 158, 11, 0.1);
+  color: var(--accent-gold);
+  padding: 4px 12px;
+  border-radius: 9999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: inline-block;
+  margin-bottom: 12px;
+  border: 1px solid rgba(245, 158, 11, 0.3);
+}
+
+h1 {
+  font-size: 2rem;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 0.95rem;
+}
+
+.content h2 {
+  font-size: 1.25rem;
+  color: var(--accent-gold);
+  margin-top: 30px;
+  margin-bottom: 12px;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 6px;
+}
+
+.content h3 {
+  font-size: 1.05rem;
+  color: #ffffff;
+  margin-top: 16px;
+  margin-bottom: 8px;
+}
+
+.content p {
+  margin-bottom: 16px;
+  color: var(--text-main);
+  font-size: 0.95rem;
+  text-align: justify;
+}
+
+.content ul {
+  margin-left: 20px;
+  margin-bottom: 16px;
+}
+
+.content li {
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+}
+
+/* Highlight summary boxes */
+.summary-box {
+  background: rgba(239, 68, 68, 0.08);
+  border-left: 4px solid var(--accent-red);
+  padding: 12px 16px;
+  margin: 20px 0;
+  border-radius: 0 8px 8px 0;
+}
+
+.summary-box .category {
+  font-weight: bold;
+  color: var(--accent-red);
+  display: block;
+  margin-bottom: 4px;
+  text-transform: uppercase;
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+}
+
+.summary-box .impact {
+  font-size: 0.9rem;
+  color: var(--text-main);
+}
+
+.btn-agree {
+  background-color: var(--accent-blue);
+  color: white;
+  border: none;
+  padding: 14px 40px;
+  font-size: 1rem;
+  font-weight: bold;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2);
+}
+
+.btn-agree:hover {
+  background-color: #2563eb;
+  transform: translateY(-1px);
+}
+
+.btn-agree:active {
+  transform: translateY(0);
+}
+
+/* End of generated code */

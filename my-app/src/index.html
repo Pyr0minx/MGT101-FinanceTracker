@@ -7,14 +7,16 @@
     </head>
     <body id="login-screen">
       <header id="title-display">Placeholder</header>
-      <div id="login">
-        <input type="email" placeholder="email">
-        <input type="password" placeholder="password">
-        <a href="dashboard.html" id="login-btn">Login</a>
-        <div id="signup-row">
-          <span>Don't have an account?</span>
-          <a href="signup.html">sign up</a>
-        </div>
+      <div>
+        <form action="dashboard.html" method="GET" id="login">
+          <input type="email" placeholder="email" required>
+          <input type="password" placeholder="password" required>
+          <div id="eula-row" style="font-size: 0.85rem; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">
+            <input type="checkbox" id="eula-agree" required>
+            <label for="eula-agree">I have read and agree to the <a href="EULA.html" target="_blank">EULA</a></label>
+          </div>
+          <button type="submit" id="login-btn">Login</button>
+        </form>
       </div>
     </body>
 </html>
