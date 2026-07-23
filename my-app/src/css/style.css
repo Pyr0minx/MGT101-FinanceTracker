@@ -58,6 +58,7 @@ table {
   --accent-red: #ef4444;
   --accent-blue: #3b82f6;
   --border-color: #334155;
+  --header-links-color: #3a3a3a
 }
 
 body {
@@ -238,3 +239,69 @@ h1 {
 }
 
 /* End of generated code */
+
+header {
+  height: 100px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+  color: darkgrey;
+}
+
+#header-links {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+#header-links a {
+  text-decoration: none;
+  padding: 20px;
+  color: var(--header-links-color);
+  border-radius: 25px;
+  transition: 0.3s all;
+}
+
+#header-links a:hover {
+  background-color: var(--text-main);
+  color: black;
+}
+
+footer {
+  height: 300px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 30px 100px 30px;
+  color: lightgrey;
+  background-color: black;
+  gap: 20%;
+}
+
+footer ul {
+  gap: 15px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+}
+
+footer ul a {
+  color: white;
+  text-decoration: none;
+}
+
+footer ul a:hover {
+  color: lightgrey;
+}
+
+#footer-links {
+  display: grid;
+  grid-template-rows: repeat(5, auto);
+  grid-auto-flow: column;
+  gap: 15px 60px;
+}
