@@ -13,3 +13,11 @@ function toggleMobileMenu() {
 }
 
 menuButton.addEventListener('click', e => {toggleMobileMenu()})
+
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 767) {
+        menu.style.display = '';
+
+        menuActive = false;
+    }
+});
