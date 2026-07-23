@@ -58,7 +58,9 @@ table {
   --accent-red: #ef4444;
   --accent-blue: #3b82f6;
   --border-color: #334155;
-  --header-links-color: #3a3a3a
+  --header-links-color: #3a3a3a;
+  --header-hover-bg: #cbd5e1;
+  --footer-heading-color: #989898;
 }
 
 body {
@@ -241,7 +243,7 @@ h1 {
 /* End of generated code */
 
 header {
-  height: 100px;
+  height: auto;
   display: flex;
   flex-direction: row;
   align-items: center;
@@ -253,34 +255,42 @@ header {
 #header-links {
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-end;
   justify-content: space-between;
   gap: 25px;
+  padding-top: 10px;
 }
 
 #header-links a {
   text-decoration: none;
-  padding: 20px;
   color: var(--header-links-color);
-  border-radius: 25px;
   transition: 0.3s all;
+  padding: 15px 20px;
+  gap: 50px;
+  border-radius: 15px;
 }
 
 #header-links a:hover {
-  background-color: var(--text-main);
+  background-color: var(--header-hover-bg);
   color: black;
 }
 
 footer {
-  height: 300px;
+  height: auto;
   display: flex;
   flex-direction: row;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   padding: 100px 30px 100px 30px;
   color: lightgrey;
   background-color: black;
   gap: 20%;
+}
+
+.footer-h2 {
+  color: var(--footer-heading-color);
+  padding-bottom: 30px;
+  font-size: 20px;
 }
 
 footer ul {
@@ -304,4 +314,55 @@ footer ul a:hover {
   grid-template-rows: repeat(5, auto);
   grid-auto-flow: column;
   gap: 15px 60px;
+}
+
+#hamburger-icon {
+  display: none;
+  padding: 20px;
+  border-radius: 25%;
+  color: var(--header-links-color);
+}
+
+#hamburger-icon:hover {
+  color: black;
+  background-color: var(--text-main);
+}
+
+@media (max-width: 767px)  {
+  header {
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    padding: 10px;
+    height: auto;
+  }
+  #hamburger-icon {
+    display: block;
+  }
+  #header-links {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+    width: 100%;
+    gap:0;
+  }
+  #header-links li {
+    width: 100%;
+  }
+  #header-links a {
+    background-color: white;
+    padding: 10px;
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    text-align: right;
+    border-radius: 0;
+  }
+  #header-links a:hover {
+    color: black;
+  }
+  #footer-links {
+    grid-template-rows: repeat(8, auto);
+  }
 }
