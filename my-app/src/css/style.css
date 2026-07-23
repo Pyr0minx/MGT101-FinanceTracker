@@ -366,3 +366,21 @@ footer ul a:hover {
     grid-template-rows: repeat(8, auto);
   }
 }
+
+.container-row {
+  display: flex;
+  gap: 100px;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.container-row .container {
+  margin: 0;        
+  flex: 1;           
+}
+
+#total-money{
+  color:#22c55e;
+  font-size: clamp(1.5rem, 15cqw, 4.5rem);
+}
